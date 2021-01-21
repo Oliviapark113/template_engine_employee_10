@@ -22,5 +22,8 @@
   "homepage": "https://github.com/Oliviapark113/template_engine_employee_10#readme",
   "devDependencies": {
     "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "inquirer": "^7.3.3"
   }
 }
