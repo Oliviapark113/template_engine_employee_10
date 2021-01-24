@@ -36,11 +36,13 @@ so that I have quick access to emails and GitHub profiles.
 
  ## Contributing:
 
-   Triology and North Western Bootcamp provide the starter material.
+   Triology and North Western Bootcamp provide the starter material including test, html template in both html & JS, css code and material.
 
  ## Test:
   
   `npm test`
+
+  Pass all test.
 
   ![testonterminal](./screen%20shot/test.jpg)
 
@@ -58,6 +60,6 @@ so that I have quick access to emails and GitHub profiles.
 
 ## Demo Project.
 
-  ![Demo in gif](demo1.gif)
+  ![Demo in gif](demo.gif)
 
 
