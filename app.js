@@ -37,6 +37,12 @@ inquirer.prompt([
   validate:(value)=>{if(value){return true} else{return "Please enter valid information"}}
   },
   
+  {  type:'list',
+  message:'What role would you like to add to your team board? ',
+  choices: ['Manager', 'Engineer', 'Intern'],
+  name:'role',
+  validate:(value)=>{if(value){return true} else{return "Please enter valid information"}}
+  },
 
   {  type:'confirm',
   message:'Would you like to add more emplyee? ',
@@ -46,12 +52,7 @@ inquirer.prompt([
   validate:(value)=>{if(value){return true} else{return "Please enter valid information"}}
   },
 
-  {  type:'list',
-  message:'What role would you like to add to your team board? ',
-  choices: ['Manager', 'Engineer', 'Intern'],
-  name:'role',
-  validate:(value)=>{if(value){return true} else{return "Please enter valid information"}}
-  },
+
    ]).then(info=>{
  
   
@@ -60,7 +61,7 @@ inquirer.prompt([
     questions = [
       {
         type: 'input',
-        message: 'What is your officeNumber?',
+        message: 'What is manager\'s officeNumber?',
         name: 'officeNumber',
         validate:(value)=>{
         //only contains number
@@ -73,7 +74,7 @@ inquirer.prompt([
   else if (info.role === 'Engineer'){
      questions = [
       { type: 'input',
-        message: 'What is your github user name?',
+        message: 'What is engineer\'s github user name?',
         name: 'github',
         validate:(value)=>{if(value){return true} else{return "Please enter valid information"}}
   
@@ -85,7 +86,7 @@ inquirer.prompt([
   else if (info.role === 'Intern'){
     questions = [
      { type: 'input',
-       message: 'What school are you attending?',
+       message: 'What school is intern attending?',
        name: 'school',
        validate:(value)=>{if(value){return true} else{return "Please enter valid information"}}
  
@@ -109,8 +110,8 @@ inquirer.prompt([
      newEmployee = new Intern( info.name, info.id,info.email, info2.school)
     
    }
-   employeeArray.push(newEmployee)
-  console.log(employeeArray)
+  employeeArray.push(newEmployee)
+
   if(info.confirmation){
     getEmployeePrompt()
 

@@ -61,5 +61,3 @@ so that I have quick access to emails and GitHub profiles.
 ## Demo Project.
 
   ![Demo in gif](demo.gif)
-
-
